@@ -25,3 +25,11 @@ Use a normal FAM account and fictional data. Prefer an account without an existi
 8. Revoke at Connected apps. Verify subsequent use fails or requires fresh browser authorization. Uninstall the plugin and remove the marketplace; verify it disappears.
 
 Record client version, outcome and date, without tokens, codes or real map contents. Remove test institutions manually in the web application if desired; deletion is not an MCP tool.
+
+## Codex — 2026-10-27
+
+- Codex CLI 0.163.0-alpha.11.2: local marketplace recognized and plugin 1.0.0 installed; bundled HTTP MCP configuration recognized.
+- Actual Codex OAuth login with the authorized test account: PASS using client metadata discovery (CIMD), PKCE and read/write scopes.
+- Live seven-tool protocol exercise using a separate MCP SDK client on that account: PASS for listing, bounded summaries, add, update, selective read, duplicate retry, version conflict, secret-like input refusal, unauthorized ID refusal, app link and revocation of access/refresh tokens. Existing map rows preserved; one fictional QA institution added.
+- These protocol checks are not an end-to-end model conversation test. Existing Codex chat cannot reload the newly installed plugin's tools mid-session; begin a new session for conversational acceptance.
+- Dedicated reviewer environment and public-directory submission status: see CODEX_REVIEW.md.

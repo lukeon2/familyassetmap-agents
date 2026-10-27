@@ -1,0 +1,44 @@
+{
+  "name": "familyassetmap",
+  "version": "1.0.0",
+  "description": "Read and maintain your own family information map through Family Asset Map MCP.",
+  "author": {
+    "name": "Family Asset Map",
+    "email": "contact@familyassetmap.com",
+    "url": "https://familyassetmap.com"
+  },
+  "homepage": "https://familyassetmap.com/for-agents",
+  "repository": "https://github.com/lukeon2/familyassetmap-agents",
+  "license": "MIT",
+  "keywords": [
+    "family",
+    "asset-map",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Family Asset Map",
+    "shortDescription": "Maintain your family map",
+    "longDescription": "Record which institutions matter to your family and where to find related documents. Read summaries, create your own Standard map, and add or update institutions. No bank connections, balances, transfers, sharing or deletion through MCP. E2EE maps must be opened in the app. Standard data can be decrypted by FAM; data the agent reads is sent to its AI provider.",
+    "developerName": "Family Asset Map",
+    "category": "Productivity",
+    "capabilities": [
+      "Read map summaries",
+      "Add and update institutions",
+      "Open your map"
+    ],
+    "websiteURL": "https://familyassetmap.com",
+    "supportURL": "https://familyassetmap.com/for-agents",
+    "privacyPolicyURL": "https://familyassetmap.com/privacy",
+    "termsOfServiceURL": "https://familyassetmap.com/terms",
+    "defaultPrompt": [
+      "Show a summary of my family map without notes or balances.",
+      "Help me record where my family can find important documents.",
+      "Open my family map in the app."
+    ],
+    "brandColor": "#346D50",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
+  }
+}
