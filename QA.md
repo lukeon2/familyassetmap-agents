@@ -5,7 +5,7 @@ Date: 2026-10-27 UTC.
 ## Status
 
 - Claude Code 2.1.311: marketplace and plugin both pass `plugin validate --strict`.
-- Clean isolated configuration: local marketplace add, plugin install, details (one skill, one HTTP MCP server), uninstall and marketplace removal all PASS. Remote GitHub installation: pending.
+- Clean isolated configuration: local marketplace add, plugin install, details (one skill, one HTTP MCP server), uninstall and marketplace removal all PASS. Remote GitHub installation: PASS from `lukeon2/familyassetmap-agents` in a second clean configuration; plugin details confirm one skill and one HTTP MCP server. No model invocation or Claude account was used.
 - Live MCP discovery: PASS (HTTP 200 resource/authorization metadata with read/write scopes, HTTP 401 challenge on anonymous MCP). Public agent guide, privacy, terms and logo links return HTTP 200.
 - Interactive Claude OAuth/read/write/revoke: NOT TESTED. A Claude user account is not available for this release's acceptance test. Do not claim full Claude compatibility or directory approval from package validation alone.
 
