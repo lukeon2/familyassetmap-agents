@@ -1,0 +1,15 @@
+{
+  "name": "familyassetmap",
+  "owner": {
+    "name": "Family Asset Map",
+    "email": "contact@familyassetmap.com"
+  },
+  "plugins": [
+    {
+      "name": "familyassetmap",
+      "source": "./plugins/familyassetmap",
+      "description": "Create and maintain your family information map through the Family Asset Map MCP service."
+    }
+  ],
+  "description": "Family Asset Map plugins for maintaining a family information map."
+}

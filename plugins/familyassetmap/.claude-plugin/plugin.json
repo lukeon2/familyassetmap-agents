@@ -1,0 +1,20 @@
+{
+  "name": "familyassetmap",
+  "version": "1.0.0",
+  "description": "Find where family assets are recorded and maintain your own Standard map. No bank access or balances.",
+  "author": {
+    "name": "Family Asset Map",
+    "email": "contact@familyassetmap.com"
+  },
+  "homepage": "https://familyassetmap.com/for-agents",
+  "repository": "https://github.com/lukeon2/familyassetmap-agents",
+  "keywords": [
+    "familyassetmap",
+    "family",
+    "asset-map",
+    "mcp"
+  ],
+  "license": "MIT",
+  "icon": "./assets/icon.png",
+  "privacyPolicyUrl": "https://familyassetmap.com/privacy"
+}
