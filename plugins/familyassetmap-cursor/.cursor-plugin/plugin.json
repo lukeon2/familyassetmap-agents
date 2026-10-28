@@ -1,0 +1,21 @@
+{
+  "name": "familyassetmap",
+  "version": "1.0.0",
+  "description": "Read and maintain your family map of institutions and where to find documents. No bank connections, balances or transfers.",
+  "author": {
+    "name": "Family Asset Map",
+    "email": "contact@familyassetmap.com"
+  },
+  "homepage": "https://familyassetmap.com/for-agents",
+  "repository": "https://github.com/lukeon2/familyassetmap-agents",
+  "license": "MIT",
+  "keywords": [
+    "familyassetmap",
+    "family",
+    "asset-map",
+    "mcp"
+  ],
+  "logo": "assets/icon.png",
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json"
+}

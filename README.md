@@ -2,7 +2,7 @@
 
 <img src="assets/folio-mark.svg" width="64" height="64" alt="Family Asset Map logo">
 
-Maintain a family information map: which institutions matter and where to find related documents. These packages connect Claude Code and Codex to the existing [Family Asset Map](https://familyassetmap.com) service using OAuth and MCP over HTTPS.
+Maintain a family information map: which institutions matter and where to find related documents. These packages connect Claude Code, Codex and Cursor to the existing [Family Asset Map](https://familyassetmap.com) service using OAuth and MCP over HTTPS.
 
 This is the publisher's own marketplace, not an approved listing in Anthropic's directory. The package is distributed without a publisher subscription purchase. Using Claude Code requires your own access to that product; this repository does not provide a Claude subscription.
 
@@ -48,6 +48,12 @@ For tools only, without a plugin skill, use `codex mcp add familyassetmap --url 
 Uninstall with `codex plugin remove familyassetmap@familyassetmap`. Revoke server-side access in [Connected apps](https://familyassetmap.com/connected-apps) as a separate step.
 
 Build a submission ZIP with `python scripts/package-codex.py`. It contains only the Codex plugin, never reviewer credentials or application backend code. See [Codex review preparation](CODEX_REVIEW.md) for the remaining submission requirements.
+
+## Cursor package
+
+The Cursor marketplace is `.cursor-plugin/marketplace.json`, pointing to [plugins/familyassetmap-cursor](plugins/familyassetmap-cursor). It includes a Cursor manifest, logo, the family-map skill and URL-only `mcp.json` for browser OAuth.
+
+See [Cursor submission instructions](CURSOR_REVIEW.md). This package is prepared for review, not yet approved or tested end to end in Cursor. Its inclusion does not establish availability in Grok Bot.
 
 ## Other agents and MCP clients
 

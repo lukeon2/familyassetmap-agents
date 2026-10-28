@@ -1,0 +1,17 @@
+{
+  "name": "familyassetmap",
+  "owner": {
+    "name": "Family Asset Map",
+    "email": "contact@familyassetmap.com"
+  },
+  "metadata": {
+    "description": "Family Asset Map OAuth MCP integration for Cursor."
+  },
+  "plugins": [
+    {
+      "name": "familyassetmap",
+      "source": "plugins/familyassetmap-cursor",
+      "description": "Read and maintain your family map of institutions and where to find documents. No bank connections, balances or transfers."
+    }
+  ]
+}
