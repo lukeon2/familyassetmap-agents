@@ -34,6 +34,14 @@ Also verify stale-version refusal, duplicate retry without a second insertion, a
 
 ## Remaining before public submission
 
+### Submission compatibility check (2026-10-27)
+
+The Codex `.mcp.json` uses a URL-only remote server entry, matching the official Codex submission example. The Claude package retains its own transport declaration. The ZIP packaging check validates this distinction.
+
+On 2026-10-27 the operator authorized eligibility from age 13, with parent or legal guardian permission and agreement to the Terms for users under 18, subject to higher local minimum ages and other applicable requirements. The Terms and Privacy pages were deployed and verified live on 2026-10-27 (Worker 6e1ed8e5-c64e-4937-be22-71bbeb3f280d). This text change does not implement age or guardian-consent verification and is not a completed legal compliance review. Plugin content must remain appropriate for general audiences including ages 13–17. Source: https://developers.openai.com/plugins/plugin-guidelines
+
+The current working conversation has no installed FAM tools exposed. SDK protocol runs must not be recorded as the five positive and three negative conversational acceptance cases.
+
 - Run and record the conversational cases in a fresh Codex session; protocol checks do not establish model behavior.
 - Supply an accessible walkthrough video showing the reviewer account and test cases.
 - Complete publisher identity/domain verification and editable portal metadata.

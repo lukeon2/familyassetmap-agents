@@ -10,7 +10,7 @@ for field in ["composerIcon", "logo"]:
     asset = (plugin / manifest["interface"][field]).resolve()
     assert asset.is_relative_to(plugin.resolve()) and asset.is_file()
 mcp = json.loads((plugin / ".mcp.json").read_text(encoding="utf-8"))
-assert mcp == {"mcpServers": {"familyassetmap": {"type": "http", "url": "https://familyassetmap.com/mcp"}}}
+assert mcp == {"mcpServers": {"familyassetmap": {"url": "https://familyassetmap.com/mcp"}}}
 files = [".codex-plugin/plugin.json", ".mcp.json", "README.md", "LICENSE", "assets/icon.png", "skills/family-map/SKILL.md"]
 output = root / "dist" / ("familyassetmap-codex-" + manifest["version"] + ".zip")
 output.parent.mkdir(exist_ok=True)

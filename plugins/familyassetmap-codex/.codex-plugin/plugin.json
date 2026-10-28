@@ -40,5 +40,65 @@
     "brandColor": "#346D50",
     "composerIcon": "./assets/icon.png",
     "logo": "./assets/icon.png"
+  },
+  "extensions": {
+    "com.openai": {
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Introduce the plugin and list the user's maps.",
+              "prompt": "Explain what Family Asset Map can do and show my maps.",
+              "tools_triggered": "get_started, list_portfolios",
+              "expected_behavior": "Explains the limits (no bank connections, balances, transfers, sharing or deletion; E2EE maps only in the app) and lists only the reviewer's own fictional demo map \"Reviewer sample map\"."
+            },
+            {
+              "description": "Bounded summary without notes or balances.",
+              "prompt": "Summarize my map without notes or balances.",
+              "tools_triggered": "get_portfolio",
+              "expected_behavior": "Returns categories and institution names from the demo map (summary only) with no notes and no balances."
+            },
+            {
+              "description": "Add an institution.",
+              "prompt": "Add Fictional Review Broker EN in the Investments category. Note: documents in the orange folder.",
+              "tools_triggered": "get_portfolio, add_location",
+              "expected_behavior": "Reads the current map version, then adds one new fictional institution with that note using the current expectedVersion and a unique idempotency key. Confirms the addition; existing entries are unchanged."
+            },
+            {
+              "description": "Update the note and verify it.",
+              "prompt": "Change the note of the broker you just added to: documents in the green folder. Then show its details.",
+              "tools_triggered": "get_portfolio, update_location",
+              "expected_behavior": "Only the note of Fictional Review Broker EN changes. A selective detail read of that institution shows \"documents in the green folder\"; balances are not displayed."
+            },
+            {
+              "description": "Open the map in the app.",
+              "prompt": "Give me a link to open my map in the browser.",
+              "tools_triggered": "open_in_app",
+              "expected_behavior": "Returns a familyassetmap.com app link and says a browser sign-in may be required. No data is changed."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Live bank balance. Family Asset Map has no bank connections or balances, so it should not be used; the assistant should say it cannot access live balances and point to the bank's official app or website.",
+              "prompt": "What's my checking account balance at Chase right now?"
+            },
+            {
+              "description": "Money transfer. Family Asset Map cannot move money, so it should not act; the assistant should say no transfer was made and point to the bank's or brokerage's official app or website.",
+              "prompt": "Transfer $200 from my savings to my brokerage account."
+            },
+            {
+              "description": "Drafting a will. Family Asset Map is not a will or legal service, so it should not be used; the assistant may answer on its own without calling Family Asset Map tools.",
+              "prompt": "Draft a will that leaves my house to my daughter."
+            }
+          ]
+        },
+        "demo_recording_url": "https://drive.google.com/file/d/1XbNgHc1Zex1kOhlQheasyqwsBKOM36Ct/view?usp=sharing",
+        "commerce": false,
+        "commerce_description": "Family Asset Map does not sell products or process payments through the plugin."
+      },
+      "publication": {
+        "release_notes": "Initial release: one skill and seven OAuth-protected MCP tools to read and maintain your own Family Asset Map. Read bounded summaries or a single institution's note, create a Standard map, and add or update institutions with version checks and idempotent writes. No bank integrations, balances, transfers, sharing, deletion or E2EE edits through MCP. E2EE maps open in the app."
+      }
+    }
   }
 }

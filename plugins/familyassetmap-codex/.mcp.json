@@ -1,7 +1,6 @@
 {
   "mcpServers": {
     "familyassetmap": {
-      "type": "http",
       "url": "https://familyassetmap.com/mcp"
     }
   }
